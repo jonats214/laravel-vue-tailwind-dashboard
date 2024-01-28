@@ -1,11 +1,11 @@
 <template>
-    <div class="p-6">
-        <h2>Dasbhoard Logged in as {{ display_name }}</h2>
+    <div class="relative h-screen" id="app">
+        <HeaderSideBar></HeaderSideBar>
+        <!-- content start -->
+        <div class="absolute top-16 w-2/3 left-1/3">Dashboard</div>
+        <!-- content end -->
     </div>
 </template>
-
 <script setup>
-let props = defineProps({
-    display_name: String,
-});
+import HeaderSideBar from "../components/HeaderSideBar.vue";
 </script>
