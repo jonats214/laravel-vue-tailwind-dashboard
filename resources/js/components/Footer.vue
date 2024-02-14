@@ -1,21 +1,6 @@
 <template>
-    <p>Has published books:</p>
-    <span></span>
+    <footer class="w-full h-14 py-2 px-4 flex items-center">
+        <span>Copyright @2024</span>
+    </footer>
 </template>
-<script>
-export default {
-    // data() {
-    //     return {
-    //         author: {
-    //             name: "Oliver Smith",
-    //             books: ["Book 1", "Book 2", "Book 3"],
-    //         },
-    //     };
-    // },
-    // computed: {
-    //     publishedBooksMessage() {
-    //         return this.author.books.length > 0 ? "Yes" : "No";
-    //     },
-    // },
-};
-</script>
+<script></script>
