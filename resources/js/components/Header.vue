@@ -1,6 +1,9 @@
 <template>
     <nav class="w-full h-14 py-2 px-4 flex items-center gap-x-2">
-        <span class="grow flex-none" @click="menuClick">
+        <span
+            class="grow flex-none cursor-pointer inline-block"
+            @click="menuClick"
+        >
             <svg
                 class="h-10 w-10"
                 clip-rule="evenodd"
@@ -33,9 +36,10 @@
 <script>
 export default {
     name: "Header",
+    emits: ["toggleSideBarEvent"],
     methods: {
         menuClick() {
-            this.$emit("menuIconClick", true);
+            this.$emit("toggleSideBarEvent", true);
         },
     },
 };

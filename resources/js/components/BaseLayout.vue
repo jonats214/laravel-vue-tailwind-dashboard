@@ -1,6 +1,6 @@
 <template>
     <div class="relative min-h-screen" id="app">
-        <Header @menu-icon-click="showSideBar"></Header>
+        <Header @toggle-side-bar-event="toggleSideBarEvent"></Header>
         <!-- content start -->
         <main class="w-full min-h-[calc(100vh-7rem)] bg-slate-50 py-2 px-4">
             <slot name="pagecontent"></slot>
@@ -8,8 +8,8 @@
         <!-- content end -->
         <Footer></Footer>
         <SideBar
-            :toggleMenu="toggleMenu"
-            @side-bar-bg-click="sideBarBgClick"
+            :toggleSideBar="toggleSideBar"
+            @toggle-side-bar-event="toggleSideBarEvent"
         ></SideBar>
     </div>
 </template>
@@ -27,15 +27,12 @@ export default {
     },
     data: function () {
         return {
-            toggleMenu: false,
+            toggleSideBar: false,
         };
     },
     methods: {
-        sideBarBgClick() {
-            this.toggleMenu = false;
-        },
-        showSideBar() {
-            this.toggleMenu = true;
+        toggleSideBarEvent(bShow) {
+            this.toggleSideBar = bShow;
         },
     },
 };
