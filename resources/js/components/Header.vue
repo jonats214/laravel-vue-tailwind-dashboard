@@ -1,7 +1,9 @@
 <template>
-    <nav class="w-full h-14 py-2 px-4 flex items-center gap-x-2">
+    <nav
+        class="w-full sm:w-[calc(100%-16rem)] h-14 py-2 px-4 flex items-center gap-x-2 sm:ms-64 border-b border-gray-200 drop-shadow-lg"
+    >
         <span
-            class="grow flex-none cursor-pointer inline-block"
+            class="grow flex-none cursor-pointer inline-block sm:invisible"
             @click="menuClick"
         >
             <svg

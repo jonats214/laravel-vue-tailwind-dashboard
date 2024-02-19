@@ -1,12 +1,12 @@
 <template>
-    <Transition name="fade">
+    <Transition :name="bgTransitionName">
         <div
-            class="fixed top-0 left-0 w-full h-full bg-black/10"
+            class="fixed top-0 left-0 w-full h-full bg-black/10 sm:hidden"
             @click="bgClick"
             v-if="toggleSideBar"
         ></div>
     </Transition>
-    <Transition name="slide">
+    <Transition :name="sideBarTransitionName">
         <div
             class="bg-gray-700 fixed top-0 left-0 w-64 h-full"
             v-if="toggleSideBar"
@@ -15,7 +15,7 @@
                 <p class="text-4xl">BRAND</p>
             </div>
             <span
-                class="absolute top-2 right-2 cursor-pointer inline-block"
+                class="absolute top-2 right-2 cursor-pointer inline-block sm:hidden"
                 @click="closeIconClick"
             >
                 <svg
@@ -40,7 +40,7 @@
 export default {
     name: "SideBar",
     emits: ["toggleSideBarEvent"],
-    props: ["toggleSideBar"],
+    props: ["toggleSideBar", "bgTransitionName", "sideBarTransitionName"],
     methods: {
         bgClick() {
             this.$emit("toggleSideBarEvent", false);
