@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\SettingsController;
 
 Route::get('/', [DashboardController::class, 'index']);
 Route::get('/settings', [SettingsController::class, 'index']);
