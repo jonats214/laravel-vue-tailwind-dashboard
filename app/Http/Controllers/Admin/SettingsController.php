@@ -8,6 +8,8 @@ use Inertia\Inertia;
 class SettingsController extends AdminController
 {
     public function index() {
-        return Inertia::render('admin/Settings');
+        $this->pageTitle = __('Settings');
+        $props = $this->getBasePageProps();
+        return Inertia::render('admin/Settings', $props);
     }
 }

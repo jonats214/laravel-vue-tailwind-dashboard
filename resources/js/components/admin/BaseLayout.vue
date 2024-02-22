@@ -11,6 +11,7 @@
         <!-- content end -->
         <Footer></Footer>
         <SideBar
+            :pageProps="pageProps"
             :toggleSideBar="toggleSideBar"
             :bgTransitionName="bgTransitionName"
             :sideBarTransitionName="sideBarTransitionName"
@@ -25,6 +26,7 @@ import Footer from "../admin/Footer.vue";
 
 export default {
     name: "BaseLayout",
+    props: ["pageProps"],
     components: {
         Header,
         SideBar,

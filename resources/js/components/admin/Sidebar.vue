@@ -14,6 +14,13 @@
             <div class="p-4 text-white overflow-y-auto">
                 <p class="text-4xl">BRAND</p>
             </div>
+
+            <SidebarNavSection
+                v-for="section in pageProps.sidebarSections"
+                :key="section.key"
+                :section="section"
+            />
+
             <span
                 class="absolute top-2 right-2 cursor-pointer inline-block sm:hidden"
                 @click="closeIconClick"
@@ -37,10 +44,17 @@
     </Transition>
 </template>
 <script>
+import SidebarNavSection from "../admin/SidebarNavSection.vue";
 export default {
     name: "SideBar",
     emits: ["toggleSideBarEvent"],
-    props: ["toggleSideBar", "bgTransitionName", "sideBarTransitionName"],
+    props: [
+        "toggleSideBar",
+        "bgTransitionName",
+        "sideBarTransitionName",
+        "pageProps",
+    ],
+    components: { SidebarNavSection },
     methods: {
         bgClick() {
             this.$emit("toggleSideBarEvent", false);

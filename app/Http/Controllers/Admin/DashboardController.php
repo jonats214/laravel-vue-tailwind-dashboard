@@ -8,8 +8,8 @@ use Inertia\Inertia;
 class DashboardController extends AdminController
 {
     public function index() {
-        return Inertia::render('admin/Dashboard', [
-            'display_name' => 'Jonathan Bulaong'
-        ]);
+        $this->pageTitle = __('Dashboard');
+        $props = $this->getBasePageProps();
+        return Inertia::render('admin/Dashboard', $props);
     }
 }

@@ -1,7 +1,7 @@
 <template>
-    <BaseLayout>
+    <BaseLayout :pageProps="$page.props">
         <template #pagecontent>
-            <h1>Dashboard</h1>
+            <h1>{{ $page.props.pageTitle }}</h1>
         </template>
     </BaseLayout>
 </template>

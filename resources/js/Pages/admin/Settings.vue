@@ -1,7 +1,7 @@
 <template>
     <BaseLayout>
         <template #pagecontent>
-            <h1>Settings</h1>
+            <h1>{{ $page.props.pageTitle }}</h1>
         </template>
     </BaseLayout>
 </template>
