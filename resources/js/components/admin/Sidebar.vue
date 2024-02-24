@@ -11,15 +11,17 @@
             class="bg-gray-700 fixed top-0 left-0 w-64 h-full"
             v-if="toggleSideBar"
         >
-            <div class="p-4 text-white overflow-y-auto">
-                <p class="text-4xl">BRAND</p>
+            <div class="h-14 px-4 flex items-center border-b border-gray-500">
+                <p class="text-4xl text-center text-white w-full">BRAND</p>
             </div>
 
-            <SidebarNavSection
-                v-for="section in pageProps.sidebarSections"
-                :key="section.key"
-                :section="section"
-            />
+            <div class="overflow-y-auto max-h-[calc(100vh-3.5rem)] pt-4">
+                <SidebarNavSection
+                    v-for="section in pageProps.sidebarSections"
+                    :key="section.key"
+                    :section="section"
+                />
+            </div>
 
             <span
                 class="absolute top-2 right-2 cursor-pointer inline-block sm:hidden"

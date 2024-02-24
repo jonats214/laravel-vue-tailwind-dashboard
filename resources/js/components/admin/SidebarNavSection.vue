@@ -1,10 +1,14 @@
 <template>
-    <div>
-        <div>{{ section.title }}</div>
-        <ul>
-            <li v-for="link in section.links" :key="link.text">
-                {{ link.text }}
-            </li>
+    <div class="pt-6 first-of-type:pt-0">
+        <div class="text-white text-xl leading-10 ml-4">
+            {{ section.title }}
+        </div>
+        <ul class="text-white">
+            <SidebarNavItem
+                v-for="link in section.links"
+                :key="link.text"
+                :link="link"
+            />
         </ul>
     </div>
 </template>
