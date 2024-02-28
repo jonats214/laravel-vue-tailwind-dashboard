@@ -8,6 +8,7 @@
                 v-for="link in section.links"
                 :key="link.text"
                 :link="link"
+                :level="1"
             />
         </ul>
     </div>

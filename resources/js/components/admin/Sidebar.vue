@@ -15,7 +15,9 @@
                 <p class="text-4xl text-center text-white w-full">BRAND</p>
             </div>
 
-            <div class="overflow-y-auto max-h-[calc(100vh-3.5rem)] pt-4">
+            <div
+                class="overflow-y-auto max-h-[calc(100vh-3.5rem)] pt-4 pb-8 sidebar-scroll-bar"
+            >
                 <SidebarNavSection
                     v-for="section in pageProps.sidebarSections"
                     :key="section.key"
@@ -28,7 +30,7 @@
                 @click="closeIconClick"
             >
                 <svg
-                    class="h-10 w-10 stroke-white"
+                    class="h-10 w-10 fill-white"
                     clip-rule="evenodd"
                     fill-rule="evenodd"
                     stroke-linejoin="round"
@@ -84,5 +86,9 @@ export default {
 .slide-enter-from,
 .slide-leave-to {
     transform: translateX(-256rem);
+}
+
+.sidebar-scroll-bar {
+    scrollbar-width: thin;
 }
 </style>
