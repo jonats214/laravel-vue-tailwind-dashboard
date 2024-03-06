@@ -14,7 +14,7 @@ This is a simple project that showcases a responsive admin dashboard layout. The
 ## How To Use
 
 1. Using your docker supported command line (e.g. WSL for docker windows etc), navigate to the project's root directory
-2. Enter `docker-compose exec up -d`
+2. Enter `docker-compose exec up -d`. This normally take around a couple of minutes for new installs.
 3. You can enter the command `docker-compose exec app bash` to open bash command line for laravel command
 4. After you're done, you can enter `docker-compose down` to shut down the docker containers
 5. For vue and tailwind development, open another command line and enter `npm install`
