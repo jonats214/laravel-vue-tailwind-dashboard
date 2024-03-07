@@ -1,5 +1,5 @@
 <template>
-    <BaseLayout>
+    <BaseLayout :pageProps="$page.props">
         <template #pagecontent>
             <h1>{{ $page.props.pageTitle }}</h1>
         </template>
